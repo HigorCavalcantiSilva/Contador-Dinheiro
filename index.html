@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+           .titulo {
+                text-align: center;
+            }
+
+            h3, h5 {
+                text-align: center;
+            }
+
+            .totalgeral {
+                text-align: center;
+            }
+
+            .tgeral, .totcedulas, .totmoedas, .totgeral {
+                font-size: 200%;
+            }
+
+            .panel1 {
+                margin-top: -8%;
+            }
+
+            #t2, #t5, #t10, #t20, #t50, #t100, #t01, #t05, #t010, #t025, #t050, #t1 {
+                color: green;
+            }
+
+            #btns {
+                margin-left: 50%;
+                transform: translate(-50%);
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <title>Contagem de Donativos</title>
+    </head>
+
+    <body>
+        <form method="POST" action="registrar.php">
+            <div class="cedulas container">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h1 class="titulo"><b>Contagem de Cédulas</b></h1></div>
+                    <div class="panel-body">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 2,00</b></span>
+                            <input name="r2" type="number" class="form-control din" placeholder="Número de Cédulas" aria-describedby="basic-addon1" id="r2">
+                            <span class="input-group-addon" id="t2">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 5,00</b></span>
+                            <input name="r5" type="number" class="form-control din" placeholder="Número de Cédulas" aria-describedby="basic-addon1" id="r5">
+                            <span class="input-group-addon" id="t5">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">  
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 10,00</b></span>
+                            <input name="r10" type="number" class="form-control din" placeholder="Número de Cédulas" aria-describedby="basic-addon1" id="r10">
+                            <span class="input-group-addon" id="t10">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 20,00</b></span>
+                            <input name="r20" type="number" class="form-control din" placeholder="Número de Cédulas" aria-describedby="basic-addon1" id="r20">
+                            <span class="input-group-addon" id="t20">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 50,00</b></span>
+                            <input name="r50" type="number" class="form-control din" placeholder="Número de Cédulas" aria-describedby="basic-addon1" id="r50">
+                            <span class="input-group-addon" id="t50">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 100,00</b></span>
+                            <input name="r100" type="number" class="form-control din" placeholder="Número de Cédulas" aria-describedby="basic-addon1" id="r100">
+                            <span class="input-group-addon" id="t100">R$ 0.00</span>
+                        </div>
+                        <br><br>    
+                        <h3>Total de Cédulas: <span name="totced" class="label label-success" id="totced">R$ 0.00</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="Moedas container">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h1 class="titulo"><b>Contagem de Moedas</b></h1></div>
+                    <div class="panel-body">
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 0,01</b></span>
+                            <input name="c1" type="number" class="form-control din" placeholder="Número de Moedas" aria-describedby="basic-addon1" id="c1">
+                            <span class="input-group-addon" id="t01">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 0,05</b></span>
+                            <input name="c5" type="number" class="form-control din" placeholder="Número de Moedas" aria-describedby="basic-addon1" id="c5">
+                            <span class="input-group-addon" id="t05">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 0,10</b></span>
+                            <input name="c10" type="number" class="form-control din" placeholder="Número de Moedas" aria-describedby="basic-addon1" id="c10">
+                            <span class="input-group-addon" id="t010">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 0,25</b></span>
+                            <input name="c25" type="number" class="form-control din" placeholder="Número de Moedas" aria-describedby="basic-addon1" id="c25">
+                            <span class="input-group-addon" id="t025">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 0,50</b></span>
+                            <input name="c50" type="number" class="form-control din" placeholder="Número de Moedas" aria-describedby="basic-addon1" id="c50">
+                            <span class="input-group-addon" id="t050">R$ 0.00</span>
+                        </div>
+                        <br>
+                        <div class="input-group">    
+                            <span class="input-group-addon" id="basic-addon1"><b>R$ 1,00</b></span>
+                            <input name="c100" type="number" class="form-control din" placeholder="Número de Moedas" aria-describedby="basic-addon1" id="r1">
+                            <span class="input-group-addon" id="t1">R$ 0.00</span>
+                        </div>
+                                            
+                        <br><br>    
+                        <h3>Total de Moedas: <span class="label label-success" id="totmoe">R$ 0.00</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="container" id="btns">
+                <input class="btn btn-primary" type="submit" value="Enviar ao Banco de Dados">
+                <br><br>
+                <a class="btn btn-success" href="valores.php">Ver registros</a>
+            </div>
+        </form>
+        <br><br>
+        
+        <div class="jumbotron container">
+            <div class="container totalgeral">
+                <h1 class="titulo"><b>Total Geral</b></h1>
+                <br><br>
+                <label for="totcedulas" class="tgeral">Total de Cedulas: </label>
+                <output class="totcedulas">R$ 0.00</output>
+                <br>
+                <label for="totmoedas" class="tgeral">Total de Moedas: </label>
+                <output class="totmoedas">R$ 0.00</output>
+                <br>
+                <label for="totgeral" class="tgeral">Total Geral: </label>
+                <output class="totgeral">R$ 0.00</output>
+            </div>
+        </div>
+
+        <div class="panel1 panel-default">
+            <div class="panel-body">
+                <h5><b>Desenvolvedor: Higor Cavalcanti Silva</b></h5>    
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+
+        var t2 = document.querySelector("#t2");
+        var t5 = document.querySelector("#t5");
+        var t10 = document.querySelector("#t10");
+        var t20 = document.querySelector("#t20");
+        var t50 = document.querySelector("#t50");
+        var t100 = document.querySelector("#t100");
+
+        var t01 = document.querySelector("#t01");
+        var t05 = document.querySelector("#t05");
+        var t010 = document.querySelector("#t010");
+        var t025 = document.querySelector("#t025");
+        var t050 = document.querySelector("#t050");
+        var t1 = document.querySelector("#t1");
+
+        var r2 = document.querySelector("#r2");
+        var r5 = document.querySelector("#r5");
+        var r10 = document.querySelector("#r10");
+        var r20 = document.querySelector("#r20");
+        var r50 = document.querySelector("#r50");
+        var r100 = document.querySelector("#r100");
+
+        var c1 = document.querySelector("#c1");
+        var c5 = document.querySelector("#c5");
+        var c10 = document.querySelector("#c10");
+        var c25 = document.querySelector("#c25");
+        var c50 = document.querySelector("#c50");
+        var r1 = document.querySelector("#r1");
+
+        var totced = document.querySelector("#totced");
+        var totmoe = document.querySelector("#totmoe");
+        var totgeral = document.querySelector(".totgeral");
+
+        var totcedulas = document.querySelector(".totcedulas");
+        var totmoedas = document.querySelector(".totmoedas");
+
+        var inputdin = document.querySelectorAll(".din");
+
+        var d1,d2,d3,d4,d5,d6 = 0;
+        var m1,m2,m3,m4,m5,m6 = 0;
+
+        var nr = 0;
+
+        Array.from(inputdin).forEach(d => {
+            d.addEventListener("input", function() {
+
+                d1 = r2.value;
+                d2 = r5.value;
+                d3 = r10.value;
+                d4 = r20.value;
+                d5 = r50.value;
+                d6 = r100.value;
+                var somac = (d1*2)+(d2*5)+(d3*10)+(d4*20)+(d5*50)+(d6*100);
+                totced.textContent = "R$ " + somac.toFixed(2);
+                totcedulas.value = "R$ " + somac.toFixed(2);
+
+                m1 = c1.value;
+                m2 = c5.value;
+                m3 = c10.value;
+                m4 = c25.value;
+                m5 = c50.value;
+                m6 = r1.value;
+                var somam = (m1*0.01)+(m2*0.05)+(m3*0.1)+(m4*0.25)+(m5*0.5)+(m6*1);
+                totmoe.textContent = "R$ " + somam.toFixed(2);
+                totmoedas.value = "R$ " + somam.toFixed(2);
+
+                totgeral.value = "R$ " + (somac + somam).toFixed(2);
+
+                t2.textContent = "R$ " + (d1 * 2).toFixed(2);
+                t5.textContent = "R$ " + (d2 * 5).toFixed(2);
+                t10.textContent = "R$ " + (d3 * 10).toFixed(2);
+                t20.textContent = "R$ " + (d4 * 20).toFixed(2);
+                t50.textContent = "R$ " + (d5 * 50).toFixed(2);
+                t100.textContent = "R$ " + (d6 * 100).toFixed(2);
+
+                t01.textContent = "R$ " + (m1 * 0.01).toFixed(2);
+                t05.textContent = "R$ " + (m2 * 0.05).toFixed(2);
+                t010.textContent = "R$ " + (m3 * 0.1).toFixed(2);
+                t025.textContent = "R$ " + (m4 * 0.25).toFixed(2);
+                t050.textContent = "R$ " + (m5 * 0.5).toFixed(2);
+                t1.textContent = "R$ " + (m6 * 1).toFixed(2);
+
+            });
+        });
+    </script>
+
+</html>
